@@ -1,0 +1,72 @@
+{
+  "full_model": {
+    "RMSE": 4.269846856544708,
+    "MAE": 2.8001956939697266,
+    "MAPE": 139.0529022216797,
+    "R2": -0.7446930408477783,
+    "Accuracy": 1.3940799345246215,
+    "training_time": 149.48480820655823,
+    "config": {
+      "name": "Full ARIMA-LSTM-MGCN (4 Graphs)",
+      "use_arima": true,
+      "num_graphs": 4,
+      "description": "Complete proposed model with all components"
+    }
+  },
+  "no_arima": {
+    "RMSE": 3.9501885526054643,
+    "MAE": 2.6093862056732178,
+    "MAPE": 734106883194880.0,
+    "R2": 0.8388146758079529,
+    "Accuracy": 27.173866044017814,
+    "training_time": 177.54472422599792,
+    "config": {
+      "name": "LSTM-MGCN (No ARIMA)",
+      "use_arima": false,
+      "num_graphs": 4,
+      "description": "Without ARIMA decomposition - direct traffic data"
+    }
+  },
+  "no_residual_graph": {
+    "RMSE": 4.423235680528231,
+    "MAE": 3.0182764530181885,
+    "MAPE": 128.16802978515625,
+    "R2": -0.8722963333129883,
+    "Accuracy": 0.005456281544127677,
+    "training_time": 76.79685831069946,
+    "config": {
+      "name": "ARIMA-LSTM-MGCN (3 Graphs)",
+      "use_arima": true,
+      "num_graphs": 3,
+      "description": "Without Residual Correlation Graph"
+    }
+  },
+  "single_graph": {
+    "RMSE": 4.457712052928741,
+    "MAE": 3.067260265350342,
+    "MAPE": 151.39540100097656,
+    "R2": -0.9015970230102539,
+    "Accuracy": 0.0,
+    "training_time": 119.91531252861023,
+    "config": {
+      "name": "ARIMA-LSTM-GCN (1 Graph)",
+      "use_arima": true,
+      "num_graphs": 1,
+      "description": "Single distance-based graph only"
+    }
+  },
+  "lstm_only": {
+    "RMSE": 3.9757520528040953,
+    "MAE": 2.5966312885284424,
+    "MAPE": 703947824168960.0,
+    "R2": 0.8367217183113098,
+    "Accuracy": 28.66670990617028,
+    "training_time": 122.07603478431702,
+    "config": {
+      "name": "LSTM Only",
+      "use_arima": false,
+      "num_graphs": 0,
+      "description": "Pure LSTM without spatial modeling"
+    }
+  }
+}
